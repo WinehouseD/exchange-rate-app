@@ -20,9 +20,9 @@ function App() {
         pauseOnHover 
         theme="dark" 
       />
-      <ConvRates />
       <LatestRates />
-      {/* <HistoricalRates /> */}
+      <ConvRates />
+      <HistoricalRates />
     </>
   )
 }

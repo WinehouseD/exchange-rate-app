@@ -41,4 +41,48 @@ const getChartData = (exchangeRates) => {
   };
 };
 
-export default getChartData;
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    title: {
+      display: true,
+      text: 'Exchange Rates for the Last 15 Days to UAH',
+      font: {
+        size: 18,
+        weight: 'bold',
+      },
+      color: '#fff', 
+    },
+    tooltip: {
+      mode: 'index',
+      intersect: false,
+    },
+  },
+  interaction: {
+    mode: 'nearest',
+    axis: 'x',
+    intersect: false,
+  },
+  scales: {
+    x: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Date',
+      },
+    },
+    y: {
+      display: true,
+      title: {
+        display: true,
+        text: 'Exchange Rate',
+      },
+    },
+  },
+};
+
+export { getChartData, options };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchLatestExchangeRate } from '../../services/api';
 import exchangeToRate from '../../utils/exchangeToRate';
 
-const LatestRates = () => {
+function LatestRates () {
     const [rates, setRates] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const LatestRates = () => {
                         const rate = exchangeToRate(uahRate, data.rates[currency] );
                         return {
                             currency,
-                            rate
+                            rate: rate.toFixed(2)
                         };
                     });
                 setRates(allRates);
@@ -26,7 +26,6 @@ const LatestRates = () => {
 
     return (
         <div className='rates'>
-            <h2>Latest Exchange Rates to UAH</h2>
             <ul>
                 {rates.map(({ currency, rate }) => (
                     <li key={currency}>
