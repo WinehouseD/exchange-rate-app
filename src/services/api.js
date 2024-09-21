@@ -13,3 +13,18 @@ export const fetchExchangeRateForDate = async (date) => {
       toast.info(`Failed to fetch exchange rates for last 10 days.`);
     }
   };
+
+  export const fetchLatestExchangeRate = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_EXCHANGERATES_API_URL}/latest`, {
+        params: {
+          access_key: import.meta.env.VITE_EXCHANGERATES_API_KEY,
+          symbols: 'USD,EUR,GBP,PLN,JPY,CNY,CAD,UAH'
+        }
+      });
+      return response.data;
+    } catch (e) {
+      console.error(e);
+      toast.info(`Failed to fetch latest exchange rates.`);
+    }
+  };

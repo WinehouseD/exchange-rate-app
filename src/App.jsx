@@ -22,7 +22,7 @@ function App() {
       />
       <ConvRates />
       <LatestRates />
-      <HistoricalRates />
+      {/* <HistoricalRates /> */}
     </>
   )
 }
