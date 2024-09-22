@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import SwapIcon from '../../assets/swap.svg';
 import styles from './ConvertRates.module.css';
+import exchangeToRate from '../../utils/exchangeToRate';
 
 function ConvertRates() {
     const convertRates = useExchangeRates();
@@ -15,7 +16,7 @@ function ConvertRates() {
         if (convertRates.length > 0) {
             const fromRate = convertRates.find(rate => rate.currency === fromCurrency)?.rate || 1;
             const toRate = convertRates.find(rate => rate.currency === toCurrency)?.rate || 1;
-            return (amount * toRate / fromRate).toFixed(2);
+            return (amount * fromRate / toRate).toFixed(2);
         }
         return 0;
     }, [amount, fromCurrency, toCurrency, convertRates]);
