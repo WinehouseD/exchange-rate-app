@@ -1,8 +1,9 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1>Magic Exchange</h1>
+<h2>Preview</h2>
+https://ibb.co/hL7jrg5
+<h2>Live Link</h2>
+<p>https://exchange-rate-apps.vercel.app/</p>
+<h2>Tech Stack</h2>
+<p>
+  React, JS, MUI, Axios, ChartJS, Toastify, Jest, Vercel
+</p>
