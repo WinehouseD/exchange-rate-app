@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 export const fetchExchangeRateForDate = async (date) => {
     try {
-      const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
+      const proxyUrl = 'https://apiproxypryvat.azurewebsites.net/api/proxy?url=';
       const dataUrl = `${import.meta.env.VITE_HISTORICALRATES_API_URL}?date=${date}`
       const url = proxyUrl + encodeURIComponent(dataUrl);
       const response = await axios.get(url);
