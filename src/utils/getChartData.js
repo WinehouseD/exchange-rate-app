@@ -2,18 +2,18 @@ import { extractAllRates } from "./exchangeRate";
 
 const getChartData = (exchangeRates) => {
   const dates = exchangeRates.map(rate => rate.date);
-  const { usdRates, eurRates, plnRates } = extractAllRates(exchangeRates);
+  const { usdRates, eurRates, plnRates, gbpRates } = extractAllRates(exchangeRates);
 
   return {
     labels: dates,
     datasets: [
       {
-        label: 'USD',
-        data: usdRates,
-        borderColor: 'rgba(75,192,192,1)',
-        backgroundColor: 'rgba(75,192,192,0.2)',
+        label: 'GBP',
+        data: gbpRates,
+        borderColor: 'rgba(54,162,235,1)',
+        backgroundColor: 'rgba(54,162,235,0.2)',
         borderWidth: 2,
-        pointStyle: 'circle',
+        pointStyle: 'triangle',
         pointRadius: 4,
         pointHoverRadius: 6,
       },
@@ -28,9 +28,19 @@ const getChartData = (exchangeRates) => {
         pointHoverRadius: 6,
       },
       {
+        label: 'USD',
+        data: usdRates,
+        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        borderWidth: 2,
+        pointStyle: 'circle',
+        pointRadius: 4,
+        pointHoverRadius: 6,
+      },
+      {
         label: 'PLN',
         data: plnRates,
-        borderColor: 'rgba(54,162,235,1)',
+        borderColor: 'rgba(255,206,86,1)',
         backgroundColor: 'rgba(54,162,235,0.2)',
         borderWidth: 2,
         pointStyle: 'triangle',

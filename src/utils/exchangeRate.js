@@ -9,5 +9,6 @@ const extractRates = (exchangeRates, currency) => {
     const usdRates = extractRates(exchangeRates, 'USD');
     const eurRates = extractRates(exchangeRates, 'EUR');
     const plnRates = extractRates(exchangeRates, 'PLN');
-    return { usdRates, eurRates, plnRates };
+    const gbpRates = extractRates(exchangeRates, 'GBP');
+    return { usdRates, eurRates, plnRates, gbpRates };
   };

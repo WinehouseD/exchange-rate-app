@@ -2,7 +2,7 @@ import { ToastContainer } from 'react-toastify'
 import LatestRates from './components/LatestRates/LatestRates'
 import 'react-toastify/dist/ReactToastify.css';
 import HistoricalRates from './components/HistoricalRates/HistoricalRates';
-import ConvRates from './components/ConvRates/ConvRates';
+import ConvertRates from './components/ConvertRates/ConvertRates';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
         theme="dark" 
       />
       <LatestRates />
-      <ConvRates />
+      <ConvertRates />
       <HistoricalRates />
     </>
   )

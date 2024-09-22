@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './HistoricalRates.css';
+import styles from './HistoricalRates.module.css';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { getDateNDaysBefore } from '../../utils/getDatesBefore';
@@ -26,8 +26,8 @@ function HistoricalRates () {
   const data = getChartData(exchangeRates);
 
   return (
-    <div className='container'>
-      <Line data={data} options={options} />
+    <div>
+      <Line className={styles.line} data={data} options={options} />
     </div>
   );
 };
