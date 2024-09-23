@@ -11,7 +11,7 @@ function HistoricalRates () {
 
   useEffect(() => {
     const fetchExchangeRates = async () => {
-      const promises = Array.from({ length: 10 }, (_, i) => {
+      const promises = Array.from({ length: 15 }, (_, i) => {
         const date = getDateNDaysBefore(15 - i);
         return fetchExchangeRateForDate(date);
       });

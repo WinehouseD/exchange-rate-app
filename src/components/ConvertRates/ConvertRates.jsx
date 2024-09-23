@@ -52,6 +52,7 @@ function ConvertRates() {
                         alt="Swap Currencies"
                         onClick={toggleCurrency}
                         className={styles.swapIcon}
+                        loading="lazy"
                     />
                 <div className={styles.column}>
                     <Autocomplete
